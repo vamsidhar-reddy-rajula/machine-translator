@@ -76,8 +76,8 @@ target/
 .ipynb_checkpoints/
 
 # exclude data from source control by default
-/data/
-/models/
+/models/*
+/src/api/best_model/
 
 # Mac OS-specific storage files
 .DS_Store
@@ -88,3 +88,4 @@ target/
 
 # Mypy cache
 .mypy_cache/
+

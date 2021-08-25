@@ -15,14 +15,14 @@ app = Flask(__name__)
 api = Api(app)
 
 model_2 = tf.keras.models.load_model(
-    "./models/base_model_8/20210824-044710-model")  # trained model
+    "./src/api/best_model/20210824-053923-model")  # trained model
 # checkpoint_path = "./models/base_model_7/20210824-031856-cp-0015.ckpt"
 # model_2.load_weights(checkpoint_path)
 
 en_tokenizer = joblib.load(
-    './models/base_model_8/20210824-044710-english_tokenizer')  # tokenize the sentence
+    './src/api/best_model/20210824-053923-english_tokenizer')  # tokenize the sentence
 # map from numbers to french
-inv_map = joblib.load('./models/base_model_8/20210824-044710-inverse_map')
+inv_map = joblib.load('./src/api/best_model/20210824-053923-inverse_map')
 
 
 class translate(Resource):
